@@ -23,7 +23,9 @@ jobs:
         with:
           node-version: 22
           cache: npm
-      - run: npm ci
+      # `npm install` rather than `npm ci`: the lockfile is generated on macOS and
+      # omits some linux-only optional subtrees, which `npm ci` rejects.
+      - run: npm install --no-audit --no-fund
       - run: npx next build
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
