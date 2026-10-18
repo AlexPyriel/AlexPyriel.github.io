@@ -19,3 +19,5 @@
 @media(max-width:760px){.hero .portraitOrbit{right:0}}
 @media(max-width:760px){.hero .portraitOrbit{width:200px;height:200px;top:96px;left:50%;right:auto;transform:translateX(-50%) rotate(-12deg)}.hero h1{z-index:4}}
 .portraitOrbit b{top:58px;left:-6px}
+.visual.crimson{background:radial-gradient(circle at 52% 38%,#8f2f3a 0,#3a1620 34%,#120e14 70%)}.project .visual.crimson{aspect-ratio:16/9}.projectInfo h3.longTitle{font-size:29px;line-height:1.1;letter-spacing:-.035em}
+@media(max-width:760px){.project .visual.crimson{aspect-ratio:16/9}.projectInfo h3.longTitle{font-size:26px}}
