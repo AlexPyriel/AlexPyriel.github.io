@@ -180,7 +180,9 @@ export default function PageView({ c }: { c: Content }) {
                 <span>{x.date}</span>
                 <h3>{x.company}</h3>
                 <h4>{x.role}</h4>
-                <p>{x.text}</p>
+                {x.text.map((para) => (
+                  <p key={para}>{para}</p>
+                ))}
               </div>
             ))}
           </div>

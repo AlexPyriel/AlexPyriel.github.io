@@ -33,7 +33,8 @@ export type Job = {
   company: string;
   date: string;
   role: string;
-  text: string;
+  // One entry per paragraph: a job covering several projects gets one per project.
+  text: readonly string[];
 };
 
 export type Lang = 'en' | 'ru';
@@ -273,37 +274,50 @@ export const en: Content = {
       company: 'SKYSCOREGAMES',
       date: '05/2026 — 10/2026',
       role: 'Senior Unity Developer · Part-time / Project-based',
-      text: 'Sole Unity developer of The Demon Wants to Marry the Princess or Lose Her at Poker, taking the PC game from scratch to Steam Playtest in six months of part-time development. Designed the Unity/C# architecture and implemented core gameplay — poker mechanics, narrative and character/card systems — alongside a castle-management meta-game with idle progression and resource generation. Owned technical planning, debugging, refactoring, optimization, preparation of the Playtest build, and handover of the codebase to another developer.',
+      text: [
+        'Sole Unity developer of The Demon Wants to Marry the Princess or Lose Her at Poker, taking the PC game from scratch to Steam Playtest in six months of part-time development. Designed the Unity/C# architecture and implemented core gameplay — poker mechanics, narrative and character/card systems — alongside a castle-management meta-game with idle progression and resource generation. Owned technical planning, debugging, refactoring, optimization, preparation of the Playtest build, and handover of the codebase to another developer.',
+      ],
     },
     {
       company: 'APPFOX',
       date: '07/2025 — Present',
       role: 'Senior Unity Developer · Project technical lead',
-      text: 'Technical lead on Imperial Arx / Coastal Defense, a mobile strategy / RTS: led two Unity developers, reviewed and corrected code, clarified specifications, estimated work and coordinated with 3D artists, game design, QA and production. Implemented core gameplay, shop, targeting and shooting, city health, enemy behavior, UI, localization and Mirror client-server features, and built ship AI for movement, routes, collision avoidance, formations, damage-based behavior and line-of-fire checks. Improved performance from ~20 to 55 FPS and cut build size from ~300 to 100 MB through Addressables restructuring, compression and content cleanup, then handed code and technical documentation to Warvar Games and provided three months of consultation to onboard its team. On Gladiator School, one of two Senior Unity Developers shipping new mechanics and UI alongside meta, retention and progression features, gameplay iteration, polish, release preparation and cross-project Unity code reviews.',
+      text: [
+        'Technical lead on Imperial Arx / Coastal Defense, a mobile strategy / RTS: led two Unity developers, reviewed and corrected code, clarified specifications, estimated work and coordinated with 3D artists, game design, QA and production. Implemented core gameplay, shop, targeting and shooting, city health, enemy behavior, UI, localization and Mirror client-server features, and built ship AI for movement, routes, collision avoidance, formations, damage-based behavior and line-of-fire checks. Improved performance from ~20 to 55 FPS and cut build size from ~300 to 100 MB through Addressables restructuring, compression and content cleanup, then handed code and technical documentation to Warvar Games and provided three months of consultation to onboard its team.',
+        'On Gladiator School, one of two Senior Unity Developers shipping new mechanics and UI alongside meta, retention and progression features, gameplay iteration, polish, release preparation and cross-project Unity code reviews.',
+      ],
     },
     {
       company: 'NDA · Idle Clicker',
       date: '01/2025 — 07/2025',
       role: 'Senior Unity Developer',
-      text: 'Integrated Addressables and built data-driven RPG meta systems: gacha, progression, rewards, onboarding, mailbox, adaptive mobile UI, and production-ready features.',
+      text: [
+        'Integrated Addressables and built data-driven RPG meta systems: gacha, progression, rewards, onboarding, mailbox, adaptive mobile UI, and production-ready features.',
+      ],
     },
     {
       company: 'SOFTINTERMOB LLC',
       date: '09/2024 — 12/2024',
       role: 'Senior Unity Developer',
-      text: 'Gameplay and production functionality, legacy refactoring, LiveOps, Battle Pass, daily rewards, promo codes, in-game offers, monetization, bug fixing, and release stability.',
+      text: [
+        'Gameplay and production functionality, legacy refactoring, LiveOps, Battle Pass, daily rewards, promo codes, in-game offers, monetization, bug fixing, and release stability.',
+      ],
     },
     {
       company: 'FREELANCE',
       date: '01/2021 — 09/2024',
       role: 'Unity Developer · Project-based',
-      text: 'Gameplay features, UI, client-side functionality, prototyping, bug fixing, and delivery support.',
+      text: [
+        'Gameplay features, UI, client-side functionality, prototyping, bug fixing, and delivery support.',
+      ],
     },
     {
       company: 'INTEGRO LLC / BIZAPPS',
       date: '05/2012 — 09/2024',
       role: 'Business Analyst / Frontend Web Developer',
-      text: '12+ years in software development, B2B integrations, analytics, frontend development, and collaboration with international distributed teams.',
+      text: [
+        '12+ years in software development, B2B integrations, analytics, frontend development, and collaboration with international distributed teams.',
+      ],
     },
   ],
 };
@@ -494,37 +508,50 @@ export const ru: Content = {
       company: 'SKYSCOREGAMES',
       date: '05/2026 — 10/2026',
       role: 'Senior Unity Developer · Part-time / проектная занятость',
-      text: 'Единственный Unity-разработчик игры The Demon Wants to Marry the Princess or Lose Her at Poker: довёл PC-проект с нуля до Steam Playtest за шесть месяцев part-time. Спроектировал архитектуру на Unity/C# и реализовал основной геймплей — покерные механики, нарративные и карточно-персонажные системы — вместе с мета-игрой управления замком, idle-прогрессией и генерацией ресурсов. Вёл техническое планирование, отладку, рефакторинг, оптимизацию, подготовку сборки для плейтеста и передачу кодовой базы другому разработчику.',
+      text: [
+        'Единственный Unity-разработчик игры The Demon Wants to Marry the Princess or Lose Her at Poker: довёл PC-проект с нуля до Steam Playtest за шесть месяцев part-time. Спроектировал архитектуру на Unity/C# и реализовал основной геймплей — покерные механики, нарративные и карточно-персонажные системы — вместе с мета-игрой управления замком, idle-прогрессией и генерацией ресурсов. Вёл техническое планирование, отладку, рефакторинг, оптимизацию, подготовку сборки для плейтеста и передачу кодовой базы другому разработчику.',
+      ],
     },
     {
       company: 'APPFOX',
       date: '07/2025 — настоящее время',
       role: 'Senior Unity Developer · Технический лид проекта',
-      text: 'Технический лид на Imperial Arx / Coastal Defense, мобильной стратегии / RTS: руководил двумя Unity-разработчиками, проводил ревью и правку кода, уточнял спецификации, оценивал задачи и координировался с 3D-артистами, геймдизайном, QA и продакшеном. Реализовал основной геймплей, магазин, таргетинг и стрельбу, здоровье города, поведение противника, UI, локализацию и клиент-серверные механики на Mirror, а также построил AI кораблей: движение, маршруты, уклонение от столкновений, построения, поведение в зависимости от урона и проверки линии огня. Поднял производительность с ~20 до 55 FPS и сократил размер сборки с ~300 до 100 МБ за счёт реструктуризации Addressables, сжатия и чистки контента, после чего передал код и техническую документацию Warvar Games и три месяца консультировал их новую команду. На Gladiator School — один из двух Senior Unity Developer: новые механики и UI, мета, удержание и прогрессия, итерации геймплея, полировка, подготовка релиза и кросс-проектные ревью Unity-кода.',
+      text: [
+        'Технический лид на Imperial Arx / Coastal Defense, мобильной стратегии / RTS: руководил двумя Unity-разработчиками, проводил ревью и правку кода, уточнял спецификации, оценивал задачи и координировался с 3D-артистами, геймдизайном, QA и продакшеном. Реализовал основной геймплей, магазин, таргетинг и стрельбу, здоровье города, поведение противника, UI, локализацию и клиент-серверные механики на Mirror, а также построил AI кораблей: движение, маршруты, уклонение от столкновений, построения, поведение в зависимости от урона и проверки линии огня. Поднял производительность с ~20 до 55 FPS и сократил размер сборки с ~300 до 100 МБ за счёт реструктуризации Addressables, сжатия и чистки контента, после чего передал код и техническую документацию Warvar Games и три месяца консультировал их новую команду.',
+        'На Gladiator School — один из двух Senior Unity Developer: новые механики и UI, мета, удержание и прогрессия, итерации геймплея, полировка, подготовка релиза и кросс-проектные ревью Unity-кода.',
+      ],
     },
     {
       company: 'NDA · Idle Clicker',
       date: '01/2025 — 07/2025',
       role: 'Senior Unity Developer',
-      text: 'Внедрил Addressables и построил data-driven мета-системы для RPG: гача, прогрессия, награды, онбординг, почта, адаптивный мобильный UI и готовые к продакшену фичи.',
+      text: [
+        'Внедрил Addressables и построил data-driven мета-системы для RPG: гача, прогрессия, награды, онбординг, почта, адаптивный мобильный UI и готовые к продакшену фичи.',
+      ],
     },
     {
       company: 'SOFTINTERMOB LLC',
       date: '09/2024 — 12/2024',
       role: 'Senior Unity Developer',
-      text: 'Геймплейная и продакшен-функциональность, рефакторинг легаси, LiveOps, Battle Pass, ежедневные награды, промокоды, внутриигровые офферы, монетизация, исправление багов и стабильность релизов.',
+      text: [
+        'Геймплейная и продакшен-функциональность, рефакторинг легаси, LiveOps, Battle Pass, ежедневные награды, промокоды, внутриигровые офферы, монетизация, исправление багов и стабильность релизов.',
+      ],
     },
     {
       company: 'FREELANCE',
       date: '01/2021 — 09/2024',
       role: 'Unity Developer · Проектная занятость',
-      text: 'Геймплейные фичи, UI, клиентская функциональность, прототипирование, исправление багов и поддержка поставки.',
+      text: [
+        'Геймплейные фичи, UI, клиентская функциональность, прототипирование, исправление багов и поддержка поставки.',
+      ],
     },
     {
       company: 'INTEGRO LLC / BIZAPPS',
       date: '05/2012 — 09/2024',
       role: 'Бизнес-аналитик / Frontend-разработчик',
-      text: '12+ лет в разработке ПО, B2B-интеграциях, аналитике и фронтенд-разработке, в сотрудничестве с международными распределёнными командами.',
+      text: [
+        '12+ лет в разработке ПО, B2B-интеграциях, аналитике и фронтенд-разработке, в сотрудничестве с международными распределёнными командами.',
+      ],
     },
   ],
 };

@@ -24,3 +24,6 @@
 /*CS-VARIANT-START*/.caseStudy{background:#5dd9c10f;border:1px solid #5dd9c13d;border-radius:4px}.caseStudy>summary{padding:15px 18px;transition:background .18s}.caseStudy>summary:hover{background:#5dd9c117}.csHead{display:flex;align-items:flex-start;gap:12px;flex-wrap:wrap}.csLabel{border:1px solid #5dd9c159;border-radius:99px;padding:4px 9px;font-size:8px;text-transform:uppercase;letter-spacing:.14em;color:var(--accent);flex:0 0 auto;margin-top:1px}.csTitle{font-size:12px;color:#d6d8dd;line-height:1.4}.csChevron{color:var(--accent)}.caseStudyBody{padding:0 18px 18px}/*CS-VARIANT-END*/
 .visual.crimson{background:radial-gradient(circle at 52% 38%,#8f2f3a 0,#3a1620 34%,#120e14 70%)}.project .visual.crimson{aspect-ratio:16/9}.projectInfo h3.longTitle{font-size:29px;line-height:1.1;letter-spacing:-.035em}
 @media(max-width:760px){.project .visual.crimson{aspect-ratio:16/9}.projectInfo h3.longTitle{font-size:26px}.heroEyebrow{align-items:flex-start;line-height:1.5}.heroEyebrow i{flex:0 0 auto;margin-top:5px}.caseStudy>summary{align-items:flex-start}.csChevron{margin-top:2px}.csTitle{font-size:12px}}
+
+/* Jobs that cover several projects render one paragraph per project. */
+.timeline p+p{margin-top:12px}
